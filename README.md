@@ -1,4 +1,4 @@
-# COURSENAME
+# Gulp.js 4
 
 This is the repository for the LinkedIn Learning course on Gulp.js 4. The full course is available from [LinkedIn Learning](https://www.linkedin.com/learning/instructors/ray-villalobos).
 
