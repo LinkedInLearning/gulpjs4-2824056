@@ -1,4 +1,4 @@
-const {src, dest, series, parallel} = require('gulp');
+const {src, dest, series, parallel, watch} = require('gulp');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
@@ -30,6 +30,13 @@ function js(cb) {
   cb();
 }
 
+function watcher(cb) {
+  watch(`${origin}/**/*.html`).on('change', series(html, browserSync.reload))
+  watch(`${origin}/**/*.css`).on('change', series(css, browserSync.reload))
+  watch(`${origin}/**/*.js`).on('change', series(js, browserSync.reload))
+  cb();
+}
+
 function server(cb) {
   browserSync.init({
     notify: false,
@@ -41,4 +48,4 @@ function server(cb) {
   cb();
 }
 
-exports.default = series(clean, parallel(html, css, js), server);
+exports.default = series(clean, parallel(html, css, js), server, watcher);
