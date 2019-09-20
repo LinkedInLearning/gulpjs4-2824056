@@ -2,6 +2,9 @@ const {src, dest, series, parallel, watch} = require('gulp');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
+const babel= require('gulp-babel');
+const concatenate = require('gulp-concat'); 
+
 const origin = 'src';
 const destination = 'build';
 
@@ -21,12 +24,13 @@ function css(cb) {
 }
 
 function js(cb) {
-  src([
-    `${origin}/js/lib/bootstrap.bundle.min.js`,
-    `${origin}/js/lib/fontawesome-all.min.js`,
-    `${origin}/js/lib/jquery.min.js`,
-    `${origin}/js/script.js`
-  ]).pipe(dest(`${destination}/js`));
+  src(`${origin}/js/lib/**/*.js`).pipe(dest(`${destination}/js/lib`));
+
+  src(`${origin}/js/script.js`)
+  .pipe(babel({
+    presets: ['@babel/env']
+  }))  
+  .pipe(dest(`${destination}/js`));
   cb();
 }
 

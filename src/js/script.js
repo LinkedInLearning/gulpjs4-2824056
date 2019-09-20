@@ -1,6 +1,9 @@
 $(function() {
   var scrolloffset = 55; //variable for menu height
 
+  console.log([1,2,3].map(n => n **2));
+
+
   // When Scrollspy Detects a change
   $(window).on('activate.bs.scrollspy', function() {
     var hash = $('.site-nav')
