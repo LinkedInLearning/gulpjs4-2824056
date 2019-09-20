@@ -1,6 +1,10 @@
 /* Load fonts */
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300|Source+Sans+Pro:200,400,600');
 
+$border-radius: 20px; 
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
 /* Variables */
 
 :root {
