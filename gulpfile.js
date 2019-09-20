@@ -1,5 +1,6 @@
-const {src, dest, series} = require('gulp');
+const {src, dest, series, parallel} = require('gulp');
 const del = require('del');
+const browserSync = require('browser-sync').create();
 
 const origin = 'src';
 const destination = 'build';
@@ -29,4 +30,15 @@ function js(cb) {
   cb();
 }
 
-exports.default = series(clean, html, css, js);
+function server(cb) {
+  browserSync.init({
+    notify: false,
+    open: false,
+    server: {
+      baseDir: destination
+    }   
+  })
+  cb();
+}
+
+exports.default = series(clean, parallel(html, css, js), server);
