@@ -1,6 +1,8 @@
-# Gulp.js 4
+# Gulp.js: Web Project Workflows
+This is the repository for the LinkedIn Learning course Gulp.js: Web Project Workflows. The full course is available from [LinkedIn Learning][lil-course-url].
 
-This is the repository for the LinkedIn Learning course on Gulp.js 4. The full course is available from [LinkedIn Learning](https://www.linkedin.com/learning/instructors/ray-villalobos).
+![Gulp.js: Web Project Workflows][lil-thumbnail-url] 
+Modern front-end development means more than just writing HTML, CSS, and JavaScript. Developing an efficient workflow will help you write better code and test and deploy your web applications easily and efficiently. Gulp.js make setting up compression, minification, preprocessing, and other common tasks as easy as writing a setup file. In this course, learn how to use gulp.js to build workflows that make managing the process of building websites a bit easier. Senior staff author Ray Villalobos demonstrates how to use gulp.js to automate common processes, including how to create serial workflows and process JavaScript with Babel.
 
 ## Instructions
 
@@ -19,3 +21,14 @@ Some branches will have a beginning and an end state. These are marked with the 
    - git
 
 2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
+
+### Instructor
+
+**Ray Villalobos**
+
+_Senior Staff Instructor at LinkedIn Learning_
+
+Check out some of my other courses on [LinkedIn Learning](https://linkedin-learning.pxf.io/c/1252977/449670/8005?subId1=githubrepo&u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Finstructors%2Fray-villalobos). You can follow me on [LinkedIn](https://www.linkedin.com/in/planetoftheweb/), read [my blog](http://raybo.org), [follow me on twitter](http://twitter.com/planetoftheweb), or check out my [youtube channel](http://youtube.com/planetoftheweb).
+
+[lil-course-url]: https://www.linkedin.com/learning/gulp-js-web-project-workflows-revision-q2-2020
+[lil-thumbnail-url]: https://cdn.lynda.com/course/2824056/2824056-1572372595950-16x9.jpg
